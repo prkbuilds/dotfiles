@@ -1,0 +1,15 @@
+{
+    "profiles": [
+        {
+            "name": "Pratik Fandade",
+            "selected": true,
+            "simple_modifications": [
+                {
+                    "from": { "key_code": "caps_lock" },
+                    "to": [{ "key_code": "left_control" }]
+                }
+            ]
+        },
+        { "name": "New profile" }
+    ]
+}
