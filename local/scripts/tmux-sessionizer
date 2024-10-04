@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 
 if [[ $# -eq 1 ]]; then
   selected=$1
@@ -29,7 +29,7 @@ tmux_running=$(pgrep tmux)
 if [[ -z $TMUX ]]; then
   tmux new-session -s $selected_name -c $selected
   exit 0
-else
+elif ! tmux has-session -t=$selected_name 2> /dev/null; then
   tmux new-session -ds $selected_name -c $selected
 fi
 
