@@ -1,0 +1,48 @@
+{
+  "title": "Window Management Sublayer",
+  "rules": [
+    {
+      "description": "Hyper + W → Window Layer",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "w",
+            "modifiers": {
+              "mandatory": [
+                "left_command",
+                "left_control",
+                "left_option",
+                "left_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "simlayer_mode": "stroke",
+              "simlayer_stroke": [
+                {
+                  "type": "basic",
+                  "from": { "key_code": "left_arrow" },
+                  "to": [
+                    { "key_code": "left_arrow", "modifiers": ["left_command"] }
+                  ]
+                },
+                {
+                  "type": "basic",
+                  "from": { "key_code": "right_arrow" },
+                  "to": [
+                    { "key_code": "right_arrow", "modifiers": ["left_command"] }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": {
+            "basic.simlayer_stroke_threshold_milliseconds": 200
+          }
+        }
+      ]
+    }
+  ]
+}
