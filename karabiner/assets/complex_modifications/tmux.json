@@ -1,0 +1,25 @@
+{
+  "description": "Hyper+T to tmux prefix (C-Space)",
+  "manipulators": [
+    {
+      "from": {
+        "key_code": "z",
+        "modifiers": {
+          "mandatory": [
+            "left_command",
+            "left_control",
+            "left_option",
+            "left_shift"
+          ]
+        }
+      },
+      "to": [
+        {
+          "key_code": "spacebar",
+          "modifiers": ["left_control"]
+        }
+      ],
+      "type": "basic"
+    }
+  ]
+}
